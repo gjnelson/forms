@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Survey for SI 339</title>
+  <title>March Madness</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -9,20 +9,102 @@
 </head>
 
 <body>
+  <style>
+  .form-group{
+    width : 70%;  /*Move this stuff at the end to a stylesheet otherwise Collen will dock us points.... */
+  } 
+  </style>
+
+  <h2>NCAA Tournament - Survey</h2>
   <form role="form">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+    <label for="name">Name:</label>
+    <input type="name" class="form-control" id="input_name" placeholder="Enter your name:">
   </div>
+
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="email">Email Address:</label>
+    <input type="email" class="form-control" id="input_email" placeholder="Enter your email:">
   </div>
+  <h1> Who do you think will make it to the final four? </h1> 
   <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
+    <h2>South</h2>
+<select class="form-control" id="south">
+    <option value="one">Flordia (1)</option>
+    <option value="two">Mount St. Mary's (16)</option>
+    <option value="three">Albany (16)</option>
+    <option value="four">Colorado (8)</option>
+    <option value="five">Pittsburgh (9)</option>
+    <option value="six">VCU (5)</option>
+    <option value="seven">Stephen F. Austin (12)</option>
+    <option value="eight">UCLA (4)</option>
+    <option value="nine">Tulsa (13)</option>
+    <option value="Ohio State">Ohio State (6)</option>
+    <option value="eleven">Dayton (11)</option>
+    <option value="tweleve">Syracuse (3)</option>
+    <option value="thirteen">Western Michigan (14)</option>
+    <option value="fourteen">New Mexico (7)</option>
+    <option value="fifteen">Stanford (10)</option>
+    <option value="sixteen">Kansas (2)</option>
+    <option value="seventeen">Eastern Kentucky (15)</option>
+</select>
+
+</div>
+<button type="button" onclick="validate()">Submit</button>
+
+
+<script>
+function validate()
+{
+ var south = document.getElementById("south");
+ var selectedValue = south.options[south.selectedIndex].value;
+    if (selectedValue == "Ohio State")
+   {
+    alert("We all know Aaron Craft sucks! Why would you pick OSU?");
+   }
+}
+</script>
+
+
+
+  <div class="form-group">
+      <h2>West</h2>
+<select class="form-control">
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+    <option value="four">Four</option>
+    <option value="five">Five</option>
+</select>
+</div>
+
+  <div class="form-group">
+      <h2>East</h2>
+<select class="form-control">
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+    <option value="four">Four</option>
+    <option value="five">Five</option>
+</select>
+</div>
+
+  <div class="form-group">
+      <h2>Midwest</h2>
+<select class="form-control">
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+    <option value="four">Four</option>
+    <option value="five">Five</option>
+</select>
+</div>
+
+
+
+
+
+
   <div class="checkbox">
     <label>
       <input type="checkbox"> Check me out
