@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+  <title>March Madness</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/test.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      <link rel="stylesheet" href="font/css/font-awesome.min.css">
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1 id="timeline">NCAA-March Madness Survey</h1>
+    </div>
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="fa fa-check-square"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Please fill out the information:</h4>
+            </div>
+            <div class="timeline-body">
+
+              <form role="form">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="name" class="form-control" id="input_name" placeholder="Enter your name:">
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address:</label>
+                  <input type="email" class="form-control" id="input_email" placeholder="Enter your email:">
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="fa fa-arrow-down"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">South Picks</h4>
+            </div>
+            <div class="timeline-body">
+              
+<select class="form-control drop-down" id="south">
+    <option value="one">Flordia (1)</option>
+    <option value="two">Mount St. Mary's (16)</option>
+    <option value="three">Albany (16)</option>
+    <option value="four">Colorado (8)</option>
+    <option value="five">Pittsburgh (9)</option>
+    <option value="six">VCU (5)</option>
+    <option value="seven">Stephen F. Austin (12)</option>
+    <option value="eight">UCLA (4)</option>
+    <option value="nine">Tulsa (13)</option>
+    <option value="Ohio State">Ohio State (6)</option>
+    <option value="eleven">Dayton (11)</option>
+    <option value="tweleve">Syracuse (3)</option>
+    <option value="thirteen">Western Michigan (14)</option>
+    <option value="fourteen">New Mexico (7)</option>
+    <option value="fifteen">Stanford (10)</option>
+    <option value="sixteen">Kansas (2)</option>
+    <option value="seventeen">Eastern Kentucky (15)</option>
+</select>
+
+
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="fa fa-arrow-left"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">West Picks</h4>
+            </div>
+            <div class="timeline-body">
+
+    <select class="form-control drop-down">
+    <option value="one">Arizona (1)</option>
+    <option value="two">Weber State (16)</option>
+    <option value="three">Gonzaga (8)</option>
+    <option value="four">Oklahoma State (9)</option>
+    <option value="five">Oaklahoma (5)</option>
+    <option value="six">North Dakota State (12)</option>
+    <option value="seven">San Diego State (4)</option>
+    <option value="eight">New Mexico State (13)</option>
+    <option value="Ohio State">Baylor (6)</option>
+    <option value="ten">Nebraska (11)</option>
+    <option value="eleven">Creighton (3)</option>
+    <option value="twelve">UL-Lafayette (14)</option>
+    <option value="thirteen">Oregon (7)</option>
+    <option value="fourteen">BYU (10)</option>
+    <option value="fifteen">Wisconsin (2)</option>
+    <option value="sixteen">American (15)</option>
+</select>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge success"><i class="fa fa-arrow-right"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">East Picks</h4>
+            </div>
+            <div class="timeline-body">
+
+    <select class="form-control drop-down" id = "east">
+    <option value="one">Virginia (1)</option>
+    <option value="two">Coast. Car. (16)</option>
+    <option value="three">Memphis (8)</option>
+    <option value="four">George Washington (9)</option>
+    <option value="five">Cincinnati (5)</option>
+    <option value="six">Harvard (12)</option>
+    <option value="Michigan State">Michigan State (4)</option>
+    <option value="eight">Delaware (13)</option>
+    <option value="Ohio State">North Carolina (6)</option>
+    <option value="ten">Providence (11)</option>
+    <option value="eleven">Iowa State (3)</option>
+    <option value="twelve">NC Central (14)</option>
+    <option value="thirteen">Connecticut (7)</option>
+    <option value="fourteen">Saint Joe's (10)</option>
+    <option value="fifteen">Villanova (2)</option>
+    <option value="sixteen">Milwaukee (15)</option>
+    </select>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge info"><i class="fa fa-arrow-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Midwest Picks</h4>
+            </div>
+            <div class="timeline-body">
+    <select class="form-control drop-down">
+    <option value="one">Wichita State (1)</option>
+    <option value="two">Cal Poly (16)</option>
+    <option value="three">Kentucky (8)</option>
+    <option value="four">Kansas State (9)</option>
+    <option value="five">Saint Louis (5)</option>
+    <option value="six">North Carolina State (12)</option>
+    <option value="seven">Louisville(4)</option>
+    <option value="eight">Manhattan (13)</option>
+    <option value="Ohio State">UMass (6)</option>
+    <option value="ten">Tennessee (11)</option>
+    <option value="eleven">Duke (3)</option>
+    <option value="twelve">Mercer (14)</option>
+    <option value="thirteen">Texas(7)</option>
+    <option value="fourteen">Arizona State (10)</option>
+    <option value="fifteen">Michigan (2)</option>
+    <option value="sixteen">Wofford (15)</option>
+    </select>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">TITLE HERE</h4>
+            </div>
+            <div class="timeline-body">
+             MORE SHIT HERE
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">TITLE HERE</h4>
+            </div>
+            <div class="timeline-body">
+              More form shit here
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
