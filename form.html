@@ -98,7 +98,7 @@ function validate()
     <option value="four">George Washington (9)</option>
     <option value="five">Cincinnati (5)</option>
     <option value="six">Harvard (12)</option>
-    <option value="seven">Michigan State (4)</option>
+    <option value="Michigan State">Michigan State (4)</option>
     <option value="eight">Delaware (13)</option>
     <option value="Ohio State">North Carolina (6)</option>
     <option value="ten">Providence (11)</option>
@@ -110,6 +110,19 @@ function validate()
     <option value="sixteen">Milwaukee (15)</option>
 </select>
 </div>
+
+<button type="button" onclick="validate1()">Submit</button>
+<script>
+function validate1()
+{
+ var east = document.getElementById("east");
+ var selectedValue = east.options[east.selectedIndex].value;
+    if (selectedValue == "Michigan State")
+   {
+    alert("Fuck State!");
+   }
+}
+</script>
 
   <div class="form-group">
       <h2>Midwest</h2>
