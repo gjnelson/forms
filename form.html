@@ -13,6 +13,10 @@
   .form-group{
     width : 70%;  /*Move this stuff at the end to a stylesheet otherwise Collen will dock us points.... */
   } 
+
+  .drop-down{
+  width: 25%;
+}
   </style>
 
   <h2>NCAA Tournament - Survey</h2>
@@ -29,7 +33,7 @@
   <h1> Who do you think will make it to the final four? </h1> 
   <div class="form-group">
     <h2>South</h2>
-<select class="form-control" id="south">
+<select class="form-control drop-down" id="south">
     <option value="one">Flordia (1)</option>
     <option value="two">Mount St. Mary's (16)</option>
     <option value="three">Albany (16)</option>
@@ -69,7 +73,7 @@ function validate()
 
   <div class="form-group">
       <h2>West</h2>
-<select class="form-control">
+<select class="form-control drop-down">
     <option value="one">Arizona (1)</option>
     <option value="two">Weber State (16)</option>
     <option value="three">Gonzaga (8)</option>
@@ -91,7 +95,7 @@ function validate()
 
   <div class="form-group">
       <h2>East</h2>
-<select class="form-control" id = "east">
+<select class="form-control drop-down" id = "east">
     <option value="one">Virginia (1)</option>
     <option value="two">Coast. Car. (16)</option>
     <option value="three">Memphis (8)</option>
@@ -126,7 +130,7 @@ function validate1()
 
   <div class="form-group">
       <h2>Midwest</h2>
-<select class="form-control">
+<select class="form-control drop-down">
     <option value="one">Wichita State (1)</option>
     <option value="two">Cal Poly (16)</option>
     <option value="three">Kentucky (8)</option>
@@ -145,6 +149,7 @@ function validate1()
     <option value="sixteen">Wofford (15)</option>
 </select>
 </div>
+
 
 
 
