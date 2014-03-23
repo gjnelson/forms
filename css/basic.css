@@ -16,3 +16,29 @@ h4 {
 	font-family: "Arial Black", Gadget, sans-serif;
 }
 
+.green{
+    color: #3B5323;
+}
+
+.red{
+    color: #990000;
+}
+
+.submit_button{
+    height: 50px;
+    width: 100%;
+}
+
+.top-page{
+	margin-top: -100px;
+}
+    
+
+hr {
+margin-top: 20px;
+margin-bottom: 20px;
+border: 0;
+border-top: 4px solid #000000 !important;
+} 
+
+
