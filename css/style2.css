@@ -1,15 +1,23 @@
+h1{
+	text-align: center;
+	font-style: Georgia, Arial;
+	font-size: 60px;
+	font-weight: bold;
+	font-color: blue;
+
+}
 
 h4 {
 font-size: 20px;
 font-family: Georgia, Arial;
 font-style: normal;
 color: navy;
+
 }
 
 body{
 	background-color: yellow;
 }
-
 
 .page-header {
 padding-bottom: 9px;
@@ -18,7 +26,49 @@ border-bottom: 1px solid #eeeeee;
 margin-top: -70px;
 }
 
+.form-group{
+	font-weight: bold;
+	font-size: 10px;
+	font-family: Georgia;
+}
+
+.timeline{
+	background-color: white;
+	border: 3px solid black;
+	border-radius: 25px; 
+	padding: 30px;
+}
+
+.timeline-badge{
+	background-color:blue
+}
+
+.timeline-badge.warning{
+	background-color:blue;
+}
+
+.timeline-badge.danger{
+	background-color:blue;
+}
+
+.timeline-badge.success{
+	background-color: blue;
+}
+
+.timeline-badge.info{
+	background-color: blue;
+}
 
 .timeline-heading{
 	color: blue;
+}
+
+.timeline-panel{
+	padding: 30px;
+	border: 14px solid #d4d4d4;
+	padding-left: 50px;
+}
+
+.timeline-body{
+	margin-left: 115px;
 }
