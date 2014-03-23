@@ -34,7 +34,7 @@
             </div>
             <div class="timeline-body">
 
-              <form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+              <form name="myForm" onsubmit="return validateForm()" method="post"> <!--NO ACTION?-->
                 <div class="form-group">
                   <label for="name">Name:</label>
                   <input type="text" class="form-control" id="input_name" name="fname" placeholder="Enter your name:">
@@ -42,7 +42,7 @@
 
                 <div class="form-group">
                   <label for="email">Email Address:</label>
-                  <input type="email" class="form-control" id="input_email" placeholder="Enter your email:">
+                  <input type="email" class="form-control" name="email" id="input_email" placeholder="Enter your email:">
                 </div>
             </div>
           </div>
@@ -111,11 +111,6 @@
     <option value="fifteen">Wisconsin (2)</option>
     <option value="sixteen">American (15)</option>
 </select>
-
-
-
-
-
             </div>
           </div>
         </li>
@@ -243,9 +238,15 @@ function validateForm()
 var x=document.forms["myForm"]["fname"].value;
 if (x==null || x=="")
   {
-  alert("First name must be filled out");
+  alert("Name must be filled out");
   return false;
   }
+}
+var y = document.forms["myForm"]['email'].value;
+if(y==null || y=="")
+{
+  alert("Email must be filled out");
+  return false;
 }
 </script>
 
