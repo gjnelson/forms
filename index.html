@@ -13,10 +13,10 @@
   <link rel="stylesheet" type="text/css" href="css/default.css"/>
 
   <!--Greg CSS-->
-  <link rel="stylesheet" type="text/css" href="css/basic.css" >
+  <!--<link rel="stylesheet" type="text/css" href="css/basic.css" >-->
 
   <!--Kelly/Melissa CSS-->
-  <!--<link rel="stylesheet" type="text/css" href="css/style2.css" >-->
+  <link rel="stylesheet" type="text/css" href="css/style2.css" >
 
   <!--JavaScript-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -43,12 +43,12 @@
               <form name="myForm" method="post" action="process.php"> <!--NO ACTION?-->
                 <div class="form-group">
                   <label for="name">Name:</label>
-                  <input type="text" class="form-control" id="fName" name="fName" placeholder="Enter your name:">
+                  <input required type="text" class="form-control" id="fName" name="fName" placeholder="Enter your name:">
                 </div>
 
                 <div class="form-group">
                   <label for="email">Email Address:</label>
-                  <input type="email" class="form-control" name="email1" id="email1" placeholder="Enter your email:">
+                  <input required type="email" class="form-control" name="email1" id="email1" placeholder="Enter your email:">
                 </div>
             </div>
           </div>
@@ -247,7 +247,7 @@ if (x==null || x=="")
   alert("Name must be filled out");
   return false;
   }
-var y = document.forms["myForm"]['email'].value;
+var y = document.forms["myForm"]['email1'].value;
 if(y==null || y=="")
   {
   alert("Email must be filled out");
