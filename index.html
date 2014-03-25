@@ -48,7 +48,7 @@
             </div>
             <div class="form-group">
               <label for="email">Email Address:</label>
-                <input type="email" class="form-control" id="email1" name="email1" placeholder="Enter your email:">
+                <input type="text" class="form-control" id="email1" name="email1" placeholder="Enter your email:">
             </div>
           </div>
           </div>
@@ -244,9 +244,20 @@ if(y==null || y=="")
   alert("Email must be filled out");
   test = false;
   }
-
+ 
+   atpos = y.indexOf("@");
+   dotpos = y.lastIndexOf(".");
+   if (atpos < 1 || ( dotpos - atpos < 2 )) 
+   {
+       alert("Please enter correct email ID for the form!!!")
+       document.myForm.y.focus() ;
+       test=false;
+   }
   return test;
 }
+
+
+
 </script>
 
 </body>
