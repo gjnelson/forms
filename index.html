@@ -41,14 +41,14 @@
           </div>
           <div class="timeline-body">
           
-          <form name="myForm" method="post" action="process.php"> <!--NO ACTION?-->
+          <form name="myForm" onclick="validateForm()" method="post" action="process.php"> <!--NO ACTION?-->
             <div class="form-group">
               <label for="name">Name:</label>
-                <input type="text" required="required" class="form-control" id="fName" name="fName" placeholder="Enter your name:">
+                <input type="text" class="form-control" id="fName" name="fName" placeholder="Enter your name:">
             </div>
             <div class="form-group">
               <label for="email">Email Address:</label>
-                <input type="email" required="required" class="form-control" name="email1" id="email1" placeholder="Enter your email:">
+                <input type="email" class="form-control" name="email1" id="email1" placeholder="Enter your email:">
             </div>
           </div>
           </div>
@@ -239,6 +239,7 @@ if(y==null || y=="")
   alert("Email must be filled out");
   return false;
   }
+  return true;
 }
 </script>
 
