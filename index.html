@@ -248,7 +248,8 @@ if(y==null || y=="")
   alert("Email must be filled out");
   test = false;
   }
- 
+
+if (test){
    atpos = y.indexOf("@");
    dotpos = y.lastIndexOf(".");
    if (atpos < 1 || ( dotpos - atpos < 2 )) 
@@ -257,11 +258,9 @@ if(y==null || y=="")
        document.myForm.y.focus() ;
        test=false;
    }
+ }
   return test;
 }
-
-
-
 </script>
 
 </body>
