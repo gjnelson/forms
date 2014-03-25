@@ -41,14 +41,14 @@
           </div>
           <div class="timeline-body">
           
-          <form name="myForm" onclick="validateForm()" method="post" action="process.php"> <!--NO ACTION?-->
+          <form name="myForm" onsubmit="validateForm(this)" method="post" action="process.php"> <!--NO ACTION?-->
             <div class="form-group">
               <label for="name">Name:</label>
                 <input type="text" class="form-control" id="fName" name="fName" placeholder="Enter your name:">
             </div>
             <div class="form-group">
               <label for="email">Email Address:</label>
-                <input type="email" class="form-control" name="email1" id="email1" placeholder="Enter your email:">
+                <input type="email" class="form-control" id="email1" name="email1" placeholder="Enter your email:">
             </div>
           </div>
           </div>
@@ -216,6 +216,7 @@
           <div class="timeline-panel">
             <div class="timeline-body">
             <input type="submit" value="Submit" class="btn btn-primary submit_button">
+          </form>
             </div>
           </div>
         </li>
@@ -225,21 +226,26 @@
 </div>
 
 <script>
-function validateForm()
+function validateForm(myForm)
 {
-var x=document.forms["myForm"]["fname"].value;
+
+var test = true;
+var x = myForm.fName.value;
+
 if (x==null || x=="")
   {
   alert("Name must be filled out");
-  return false;
+  test = false;
   }
-var y = document.forms["myForm"]['email'].value;
+
+var y = myForm.email1.value;
 if(y==null || y=="")
   {
   alert("Email must be filled out");
-  return false;
+  test = false;
   }
-  return true;
+
+  return test;
 }
 </script>
 
