@@ -250,6 +250,17 @@ if(y==null || y=="")
   test = false;
   }
 
+var east =myForm.east.value;
+var west = myForm.west.value;
+var south = myForm.south.value;
+var midwest = myForm.midwest.value;
+
+if((east || west || south || midwest) == "Nothing"){
+  document.myForm.south.focus();
+  alert("Please Pick a Team!");
+  test = false;
+}
+
 if (test){
    atpos = y.indexOf("@");
    dotpos = y.lastIndexOf(".");
