@@ -1,0 +1,42 @@
+body{
+	background: -webkit-linear-gradient(#FFF, #ff0000);
+	background: -o-linear-gradient(#FFF, #ff0000);
+	background: -moz-linear-gradient(#FFF, #ff0000);
+	background: linear-gradient (#FFF, #ff0000);
+}
+
+.page-header{
+	color:#0000CC;
+}
+
+.timeline-title{
+	text-align: center;
+	font-style: italic;
+	color:#ff0000;
+
+}
+
+.timeline-heading{
+	text-align: center;
+}
+
+.timeline-panel{
+	background-color:white;
+	box-shadow: 10px 10px 2px 2px #888;
+}
+
+.checkbox{
+	text-align:center;
+}
+
+#rangePrimary{
+	color: #000;
+	background-color: #d3d3d3;
+}
+
+.range.range-primary{
+	background: -webkit-linear-gradient(left, #FFF, #000);
+	background: -o-linear-gradient(right, #FFF, #000);
+	background: -moz-linear-gradient(right, #FFF, #000);
+	background: linear-gradient (to right, #FFF, #000);
+}

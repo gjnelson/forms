@@ -13,10 +13,11 @@
   <link rel="stylesheet" type="text/css" href="css/default.css"/>
 
   <!--Greg CSS-->
-  <!--<link rel="stylesheet" type="text/css" href="css/basic.css" >-->
+  <!--<link rel="stylesheet" type="text/css" href="css/basic.css">-->
 
   <!--Kelly/Melissa CSS-->
   <link rel="stylesheet" type="text/css" href="css/style2.css" >
+  <!--<link rel="stylesheet" type="text/css" href="css/style3.css">-->
 
   <!--JavaScript-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -41,14 +42,14 @@
           </div>
           <div class="timeline-body">
           
-          <form name="myForm" method="post" action="process.php"> <!--NO ACTION?-->
+          <form name="myForm" onsubmit="validateForm(this)" method="post" action="process.php"> <!--NO ACTION?-->
             <div class="form-group">
               <label for="name">Name:</label>
-                <input type="text" required="required" class="form-control" id="fName" name="fName" placeholder="Enter your name:">
+                <input type="text" class="form-control" id="fName" name="fName" placeholder="Enter your name:">
             </div>
             <div class="form-group">
               <label for="email">Email Address:</label>
-                <input type="email" required="required" class="form-control" name="email1" id="email1" placeholder="Enter your email:">
+                <input type="text" class="form-control" id="email1" name="email1" placeholder="Enter your email:">
             </div>
           </div>
           </div>
@@ -63,24 +64,25 @@
               <h4 class="timeline-title">South Picks</h4>
             </div>
             <div class="timeline-body">           
-<select class="form-control drop-down" id="south">
-    <option value="one">Flordia (1)</option>
-    <option value="two">Mount St. Mary's (16)</option>
-    <option value="three">Albany (16)</option>
-    <option value="four">Colorado (8)</option>
-    <option value="five">Pittsburgh (9)</option>
-    <option value="six">VCU (5)</option>
-    <option value="seven">Stephen F. Austin (12)</option>
-    <option value="eight">UCLA (4)</option>
-    <option value="nine">Tulsa (13)</option>
+<select class="form-control drop-down" name="south">
+    <option value="Nothing">Pick Your Team</option>
+    <option value="Flordia">Flordia (1)</option>
+    <option value="Mount St. Mary's">Mount St. Mary's (16)</option>
+    <option value="Albany">Albany (16)</option>
+    <option value="Colorado">Colorado (8)</option>
+    <option value="Pittsburgh">Pittsburgh (9)</option>
+    <option value="VCU">VCU (5)</option>
+    <option value="Stephen F. Austin">Stephen F. Austin (12)</option>
+    <option value="UCLA">UCLA (4)</option>
+    <option value="Tulsa">Tulsa (13)</option>
     <option value="Ohio State">Ohio State (6)</option>
-    <option value="eleven">Dayton (11)</option>
-    <option value="tweleve">Syracuse (3)</option>
-    <option value="thirteen">Western Michigan (14)</option>
-    <option value="fourteen">New Mexico (7)</option>
-    <option value="fifteen">Stanford (10)</option>
-    <option value="sixteen">Kansas (2)</option>
-    <option value="seventeen">Eastern Kentucky (15)</option>
+    <option value="Dayton">Dayton (11)</option>
+    <option value="Syracuse">Syracuse (3)</option>
+    <option value="Western Michigan">Western Michigan (14)</option>
+    <option value="New Mexico">New Mexico (7)</option>
+    <option value="Stanford">Stanford (10)</option>
+    <option value="Kanas">Kansas (2)</option>
+    <option value="Eastern Kentucky">Eastern Kentucky (15)</option>
 </select>
             </div>
           </div>
@@ -95,23 +97,25 @@
               <h4 class="timeline-title">West Picks</h4>
             </div>
             <div class="timeline-body">
-<select class="form-control drop-down">
-    <option value="one">Arizona (1)</option>
-    <option value="two">Weber State (16)</option>
-    <option value="three">Gonzaga (8)</option>
-    <option value="four">Oklahoma State (9)</option>
-    <option value="five">Oaklahoma (5)</option>
-    <option value="six">North Dakota State (12)</option>
-    <option value="seven">San Diego State (4)</option>
-    <option value="eight">New Mexico State (13)</option>
-    <option value="Ohio State">Baylor (6)</option>
-    <option value="ten">Nebraska (11)</option>
-    <option value="eleven">Creighton (3)</option>
-    <option value="twelve">UL-Lafayette (14)</option>
-    <option value="thirteen">Oregon (7)</option>
-    <option value="fourteen">BYU (10)</option>
-    <option value="fifteen">Wisconsin (2)</option>
-    <option value="sixteen">American (15)</option>
+
+<select class="form-control drop-down" name="west">
+    <option value="Nothing">Pick Your Team</option>
+    <option value="Arizona">Arizona (1)</option>
+    <option value="Weber State">Weber State (16)</option>
+    <option value="Gonzaga">Gonzaga (8)</option>
+    <option value="Oklahoma State">Oklahoma State (9)</option>
+    <option value="Oaklahoma">Oaklahoma (5)</option>
+    <option value="North Dakota State">North Dakota State (12)</option>
+    <option value="San Diego State">San Diego State (4)</option>
+    <option value="New Mexico State">New Mexico State (13)</option>
+    <option value="Baylor">Baylor (6)</option>
+    <option value="Nebraska">Nebraska (11)</option>
+    <option value="Creighton">Creighton (3)</option>
+    <option value="UL-Lafayette">UL-Lafayette (14)</option>
+    <option value="Oregon">Oregon (7)</option>
+    <option value="BYU">BYU (10)</option>
+    <option value="Wisconsin">Wisconsin (2)</option>
+    <option value="American">American (15)</option>
 </select>
             </div>
           </div>
@@ -126,23 +130,24 @@
               <h4 class="timeline-title">East Picks</h4>
             </div>
             <div class="timeline-body">
-<select class="form-control drop-down" id = "east">
-    <option value="one">Virginia (1)</option>
-    <option value="two">Coast. Car. (16)</option>
-    <option value="three">Memphis (8)</option>
-    <option value="four">George Washington (9)</option>
-    <option value="five">Cincinnati (5)</option>
-    <option value="six">Harvard (12)</option>
+<select class="form-control drop-down" name="east">
+    <option value="Nothing">Pick Your Team</option>
+    <option value="Virginia">Virginia (1)</option>
+    <option value="Coast. Car.">Coast. Car. (16)</option>
+    <option value="Memphis">Memphis (8)</option>
+    <option value="George Washington">George Washington (9)</option>
+    <option value="Cincinnati">Cincinnati (5)</option>
+    <option value="Harvard">Harvard (12)</option>
     <option value="Michigan State">Michigan State (4)</option>
-    <option value="eight">Delaware (13)</option>
-    <option value="Ohio State">North Carolina (6)</option>
-    <option value="ten">Providence (11)</option>
-    <option value="eleven">Iowa State (3)</option>
-    <option value="twelve">NC Central (14)</option>
-    <option value="thirteen">Connecticut (7)</option>
-    <option value="fourteen">Saint Joe's (10)</option>
-    <option value="fifteen">Villanova (2)</option>
-    <option value="sixteen">Milwaukee (15)</option>
+    <option value="Delware">Delaware (13)</option>
+    <option value="North Carolina">North Carolina (6)</option>
+    <option value="Providence">Providence (11)</option>
+    <option value="Iowa State">Iowa State (3)</option>
+    <option value="NC Central">NC Central (14)</option>
+    <option value="Connecticut">Connecticut (7)</option>
+    <option value="Saint Joe's">Saint Joe's (10)</option>
+    <option value="Villanova">Villanova (2)</option>
+    <option value="Milwaukee">Milwaukee (15)</option>
 </select>
             </div>
           </div>
@@ -157,23 +162,24 @@
               <h4 class="timeline-title">Midwest Picks</h4>
             </div>
             <div class="timeline-body">
-<select class="form-control drop-down">
-    <option value="one">Wichita State (1)</option>
-    <option value="two">Cal Poly (16)</option>
-    <option value="three">Kentucky (8)</option>
-    <option value="four">Kansas State (9)</option>
-    <option value="five">Saint Louis (5)</option>
-    <option value="six">North Carolina State (12)</option>
-    <option value="seven">Louisville(4)</option>
-    <option value="eight">Manhattan (13)</option>
-    <option value="Ohio State">UMass (6)</option>
-    <option value="ten">Tennessee (11)</option>
-    <option value="eleven">Duke (3)</option>
-    <option value="twelve">Mercer (14)</option>
-    <option value="thirteen">Texas(7)</option>
-    <option value="fourteen">Arizona State (10)</option>
-    <option value="fifteen">Michigan (2)</option>
-    <option value="sixteen">Wofford (15)</option>
+<select class="form-control drop-down" name="midwest">
+    <option value="Nothing">Pick Your Team</option>
+    <option value="Wichita State">Wichita State (1)</option>
+    <option value="Cal Poly">Cal Poly (16)</option>
+    <option value="Kentucky">Kentucky (8)</option>
+    <option value="Kansas State">Kansas State (9)</option>
+    <option value="Saint Louis">Saint Louis (5)</option>
+    <option value="North Carolina State">North Carolina State (12)</option>
+    <option value="Louisville">Louisville(4)</option>
+    <option value="Manhattan">Manhattan (13)</option>
+    <option value="UMass">UMass (6)</option>
+    <option value="Tennessee">Tennessee (11)</option>
+    <option value="Duke">Duke (3)</option>
+    <option value="Mercer">Mercer (14)</option>
+    <option value="Texas">Texas(7)</option>
+    <option value="Arizona State">Arizona State (10)</option>
+    <option value="Michigan">Michigan (2)</option>
+    <option value="Wofford">Wofford (15)</option>
 </select>
             </div>
           </div>
@@ -216,6 +222,7 @@
           <div class="timeline-panel">
             <div class="timeline-body">
             <input type="submit" value="Submit" class="btn btn-primary submit_button">
+          </form>
             </div>
           </div>
         </li>
@@ -225,20 +232,35 @@
 </div>
 
 <script>
-function validateForm()
+function validateForm(myForm)
 {
-var x=document.forms["myForm"]["fname"].value;
+var test = true;
+var x = myForm.fName.value;
+
 if (x==null || x=="")
   {
   alert("Name must be filled out");
-  return false;
+  test = false;
   }
-var y = document.forms["myForm"]['email'].value;
+
+var y = myForm.email1.value;
 if(y==null || y=="")
   {
   alert("Email must be filled out");
-  return false;
+  test = false;
   }
+
+if (test){
+   atpos = y.indexOf("@");
+   dotpos = y.lastIndexOf(".");
+   if (atpos < 1 || ( dotpos - atpos < 2 )) 
+   {
+       alert("Please enter correct email ID for the form!!!")
+       document.myForm.y.focus() ;
+       test=false;
+   }
+ }
+  return test;
 }
 </script>
 
