@@ -21,6 +21,8 @@
 
   <!--JavaScript-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script src="validate.js"></script>
+
 
 </head>
 <body>
@@ -230,50 +232,5 @@
     </ul>
     <!--END TIMELINE///////////////////////////-->
 </div>
-
-<script>
-function validateForm(myForm)
-{
-var test = true;
-var x = myForm.fName.value;
-
-if (x==null || x=="")
-  {
-  alert("Name must be filled out");
-  test = false;
-  }
-
-var y = myForm.email1.value;
-if(y==null || y=="")
-  {
-  alert("Email must be filled out");
-  test = false;
-  }
-
-var east =myForm.east.value;
-var west = myForm.west.value;
-var south = myForm.south.value;
-var midwest = myForm.midwest.value;
-
-if((east || west || south || midwest) == "Nothing"){
-  document.myForm.south.focus();
-  alert("Please Pick a Team!");
-  test = false;
-}
-
-if (test){
-   atpos = y.indexOf("@");
-   dotpos = y.lastIndexOf(".");
-   if (atpos < 1 || ( dotpos - atpos < 2 )) 
-   {
-       alert("Please enter correct email ID for the form!!!")
-       document.myForm.y.focus() ;
-       test=false;
-   }
- }
-  return test;
-}
-</script>
-
 </body>
 </html>
