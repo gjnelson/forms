@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="css/default.css"/>
 
   <!--Greg CSS-->
-  <link rel="stylesheet" type="text/css" href="css/style1.css">
+  <link rel="stylesheet" type="text/css" href="css/basic.css">
 
   <!--Kelly/Melissa CSS-->
   <!--<link rel="stylesheet" type="text/css" href="css/style2.css" >-->
@@ -21,8 +21,6 @@
 
   <!--JavaScript-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-  <script src="validate.js"></script>
-
 
 </head>
 <body>
@@ -44,7 +42,7 @@
           </div>
           <div class="timeline-body">
           
-          <form name="myForm" onsubmit="return validateForm(this)" method="post" action="process.php"> 
+          <form name="myForm" onsubmit="return validateForm(this)" method="post" action="process.php">
             <div class="form-group">
               <label for="name">Name:</label>
                 <input type="text" class="form-control" id="fName" name="fName" placeholder="Enter your name:">
@@ -202,15 +200,20 @@
             <output id="rangePrimary">50</output>
           </div>
 
-    <label for="bracket" class="control-label input-group">  <h4>Did you make a bracket this year?</h4></label>
 
+    <label for="bracket" class="control-label input-group">  <h4>Did you make a bracket this year?</h4></label>
     <label class="checkbox">
       <input type="radio" name="y/n" value="yes"> <h4>Yes</h4><i class="fa fa-2x fa-thumbs-up green"></i>
     </label>
-
       <label class="checkbox">
       <input type="radio" name="y/n" value="no"> <h4>No</h4><i class="fa fa-2x fa-thumbs-down red"></i>
     </label>
+
+      <span class="button-checkbox">
+        <button type="button" class="btn" data-color="primary">Michigan Going To Win It All?</button>
+        <input type="checkbox" class="hidden" checked />
+  
+
             </div>
           </div>
         </li>
@@ -231,6 +234,123 @@
       <!--END SEVENTH BOX///////////////////////////-->
     </ul>
     <!--END TIMELINE///////////////////////////-->
+
+
+<script>
+$(function () {
+    $('.button-checkbox').each(function () {
+
+        // Settings
+        var $widget = $(this),
+            $button = $widget.find('button'),
+            $checkbox = $widget.find('input:checkbox'),
+            color = $button.data('color'),
+            settings = {
+                on: {
+                    icon: 'fa fa-smile-o'
+                },
+                off: {
+                    icon: 'fa fa-frown-o'
+                }
+            };
+
+        // Event Handlers
+        $button.on('click', function () {
+            $checkbox.prop('checked', !$checkbox.is(':checked'));
+            $checkbox.triggerHandler('change');
+            updateDisplay();
+        });
+        $checkbox.on('change', function () {
+            updateDisplay();
+        });
+
+        // Actions
+        function updateDisplay() {
+            var isChecked = $checkbox.is(':checked');
+
+            // Set the button's state
+            $button.data('state', (isChecked) ? "on" : "off");
+
+            // Set the button's icon
+            $button.find('.state-icon')
+                .removeClass()
+                .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+            // Update the button's color
+            if (isChecked) {
+                $button
+                    .removeClass('btn-default')
+                    .addClass('btn-' + color + ' active');
+            }
+            else {
+                $button
+                    .removeClass('btn-' + color + ' active')
+                    .addClass('btn-default');
+            }
+        }
+
+        // Initialization
+        function init() {
+
+            updateDisplay();
+
+            // Inject the icon if applicable
+            if ($button.find('.state-icon').length === 0) {
+                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+            }
+        }
+        init();
+    });
+});
+
+
+</script>
+
 </div>
+
+<script>
+function validateForm(myForm)
+{
+var test = true;
+var x = myForm.fName.value;
+
+if (x==null || x=="")
+  {
+  alert("Name must be filled out");
+  test = false;
+  }
+
+var y = myForm.email1.value;
+if(y==null || y=="")
+  {
+  alert("Email must be filled out");
+  test = false;
+  }
+
+var east =myForm.east.value;
+var west = myForm.west.value;
+var south = myForm.south.value;
+var midwest = myForm.midwest.value;
+
+if((east || west || south || midwest) == "Nothing"){
+  document.myForm.south.focus();
+  alert("Please Pick a Team!");
+  test = false;
+}
+
+if (test){
+   atpos = y.indexOf("@");
+   dotpos = y.lastIndexOf(".");
+   if (atpos < 1 || ( dotpos - atpos < 2 )) 
+   {
+       alert("Please enter correct email ID for the form!!!")
+       document.myForm.y.focus() ;
+       test=false;
+   }
+ }
+  return test;
+}
+</script>
+
 </body>
 </html>
